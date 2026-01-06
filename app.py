@@ -39,10 +39,16 @@ if submit_button:
         with st.spinner("🔍 Finding the perfect tracks for you..."):
             response = model.generate_content(
                 f"""
-                Recommend 5 songs that match the mood '{user_input}'.
-                Show the output in a markdown table with columns:
-                Song Name | Artist
-                """
+Recommend 5 Indian songs that match the mood '{user_input}'.
+
+Rules:
+- Songs must be Indian (Hindi or regional Indian languages only)
+- Do NOT include any international / non-Indian songs
+- Output ONLY a markdown table
+- Columns must be exactly:
+  Song Name | Artist
+"""
+
             )
 
         st.markdown(response.text)
