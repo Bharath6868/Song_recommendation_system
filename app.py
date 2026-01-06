@@ -17,7 +17,7 @@ model = genai.GenerativeModel("gemini-2.5-flash")
 # ---------------------------------
 # App UI
 # ---------------------------------
-st.title("🎧 Song Recommendation System")
+st.title("🎧 Song Recommend System")
 st.markdown("### 🎶 Discover songs that match your mood")
 st.markdown("---")
 
